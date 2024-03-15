@@ -1,0 +1,150 @@
+.label-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  
+  @media screen and (max-width: 650px) {
+    display: grid;
+    grid-template-columns: 1fr 288px 1fr;
+    width: 100%;
+  }
+
+  &--active-prize {
+    & label, & label .inside-wrapper, & .line {
+      background-color: rgba(56, 145, 177, 1) !important;
+    }
+
+    & label .inside-wrapper .text-wrapper {
+      color: #fff;
+    }
+  }
+
+  &--not-active-prize {
+    & label, & .line {
+      background-color: rgb(208, 208, 216) !important;
+    }
+
+    & label .inside-wrapper .text-wrapper {
+      color: rgb(208, 208, 216);
+    }
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+
+    & label, & label .inside-wrapper, .line {
+      cursor: not-allowed;
+    }
+  }
+
+  &--selected {
+    & label, .line {
+      background-color: rgb(255, 139, 55) !important;
+    }
+  }
+
+  &--correct {
+    & label, .line {
+      background-color: rgb(71, 216, 103) !important;
+    }
+  }
+
+  &--wrong {
+    & label, .line {
+      background-color: rgb(236, 98, 89) !important;
+    }
+  }
+
+  &--hover:hover {
+    & label, .line {
+      background-color: rgb(30, 106, 142);
+    }
+  }
+
+  &--pair {
+    justify-self: start;
+  }
+
+  & .line {
+    height: 1px;
+    background-color: rgb(208, 208, 216);
+
+    @media screen and (max-width: 650px) {
+      width: 100%;
+    }
+  }
+
+  &--big-line .line {
+    width: 69px;
+    @media screen and (max-width: 650px) {
+      width: 100%;
+    }
+  }
+
+  &--small-line .line {
+    width: 17px;
+    @media screen and (max-width: 650px) {
+      width: 100%;
+    }
+  }
+
+  & label {
+    position: relative;
+    width: 288px; height: 56px;
+    background-color: rgb(208, 208, 216);
+    box-sizing: border-box;
+    clip-path: polygon(87% 0, 100% 50%, 87% 100%, 15% 107%, 0 50%, 13% 0);
+    transition: background-color 0.3s;
+
+    & .inside-wrapper {
+      display: flex;
+      align-items: center; justify-content: start;
+      position: absolute;
+      top: 1px; left: 1px;
+      width: 286px;
+      height: 54px;
+      background-color: #fff;
+      clip-path: polygon(87% 0, 99.5% 50%, 87% 100%, 15% 107%, 0.4% 50%, 13% 0);;
+      color: rgb(56, 145, 177);
+      font-size: 20px;
+
+      &--correct {
+        & label {
+          background-color: rgb(230, 250, 234) !important;
+        }
+      }
+
+      &--wrong {
+        & label {
+          background-color: rgb(253, 238, 237) !important;
+        }
+      }
+
+      &--selected {
+        background-color: rgb(255, 243, 235);
+      }
+
+      & .text-wrapper {
+        margin-left: 35px;
+        width: 275px;
+      }
+
+      & span {
+        color: rgb(0, 73, 116);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@keyframes sun-rise {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,21 @@
+a.link-button {
+  display: block;
+  width: 296px;
+  border-radius: 12px;
+  background-color: rgb(30, 106, 142);
+  text-align: center;
+  padding: 21px 24px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgb(56, 145, 177);
+  }
+
+  &:active {
+    background-color: rgb(0, 59, 99);
+  }
+}
