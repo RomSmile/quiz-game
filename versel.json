@@ -1,8 +1,3 @@
 {
-  "routes": [
-    { "src": "/", "dest": "/" },
-    { "src": "/start", "dest": "/" },
-    { "src": "/quiz", "dest": "/" },
-    { "src": "/finish", "dest": "/" }
-  ]
+  "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
 }
