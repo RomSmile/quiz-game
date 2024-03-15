@@ -8,6 +8,7 @@ You can edit your questions and answers [in this directory](https://github.com/R
 ### Start Your Project in development mode
 
 ```bash
+Node >= 18
 # to install dependencies
 npm install
 # start your project in development mode
