@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { lettersArray } from "@/routes/Quiz/constants.ts";
-import { IHexagon } from "@/routes/Quiz/components/Hexagon/types.ts";
+import { IHexagon } from "./types.ts";
 import "./style.scss";
 
 const Hexagon: FC<IHexagon> = ({

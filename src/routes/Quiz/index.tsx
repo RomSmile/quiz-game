@@ -2,24 +2,8 @@ import React, { useState, useMemo, useLayoutEffect } from "react";
 import questions from "./questions.json";
 import Hexagon from "@/routes/Quiz/components/Hexagon";
 import { useNavigate } from "react-router-dom";
+import { IQuestion, IUserAnswer } from "./types.ts";
 import "./style.scss";
-
-interface IQuestion {
-  text: string;
-  answers: {
-    text: string;
-    IsCorrect: boolean;
-  }[];
-  prize: number;
-}
-
-interface IUserAnswer {
-  answers: {
-    isSelected: boolean;
-    isCorrect: boolean;
-  }[];
-  finished: boolean;
-}
 
 const reversedQuestions = () => {
   const result: IQuestion[] = [];
